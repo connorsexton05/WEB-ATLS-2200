@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: rgba(210, 22, 22, 0.736);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 5vw;
+
+}
