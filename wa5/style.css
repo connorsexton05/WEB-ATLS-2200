@@ -3,15 +3,100 @@
     margin: 0;
 }
 
-nav {
+.main-nav{
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background-color: rgba(210, 22, 22, 0.736);
+    background-color: teal;
+    color: white;
+    position: relative;
 }
 
 .nav-menu {
     display: flex;
-    gap: 5vw;
+    gap: 1.5vw;
+}
 
+.nav-toggle {
+    display: none;
+    padding: 0.5em;
+}
+
+.nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu li {
+    padding: 0.4em;
+    text-align: right;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu li:hover {
+    background-color: rgb(2, 168, 168);
+}
+
+.nav-burger-menu {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-burger-menu {
+        display: none !important;
+    }
+    .nav-menu{
+        display: flex;
+    }    
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        background-color: rgba(255, 255, 255, 0.869);
+        height: 0.2em;
+        width: 2em;
+        display: flex;
+    }
+
+    .nav-toggle:hover {
+        background-color: rgb(2, 172, 172);
+    }
+
+    .main-nav button {
+        gap: 0.5em;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.show {
+        display: flex;
+        flex-direction: column;
+        background: teal;
+        position: relative;
+    }
+
+    .nav-burger-menu.show {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100vw;
+    }
 }
