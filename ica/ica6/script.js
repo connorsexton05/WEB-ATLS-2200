@@ -1,7 +1,5 @@
-
 const filterButtons = document.querySelectorAll('.gallery-nav button');
 const photoCards = document.querySelectorAll('.photo-card');
-
 
 filterButtons.forEach(button => {
   button.addEventListener('click', (event) => {
