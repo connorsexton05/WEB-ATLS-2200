@@ -252,16 +252,6 @@ footer {
     background: #f9f9f9;
   }
 
-  input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  input[type=text]:focus {
-    width: 100%;
-  }
-
   /* Parent grid for form and shows */
 .shows-container {
     display: grid;
