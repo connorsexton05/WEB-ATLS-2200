@@ -14,22 +14,6 @@
     "footer footer";
 }
 
-header {
-    grid-area: header;
-    padding: 1em;
-}
-
-.hero {
-    grid-area: hero;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: sidebar;
-}
 
 footer {
     grid-area: footer;
@@ -93,14 +77,6 @@ footer {
     display: none;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2em;
-
-}
 
 @media (min-width: 768px) {
     .nav-burger-menu {
@@ -241,8 +217,8 @@ footer {
   .show-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 2rem;
-    padding-top: 1.5rem;
+    gap: 1rem;
+    padding-top: 1rem;
   }
   
   .show-card {
@@ -252,31 +228,22 @@ footer {
     background: #f9f9f9;
   }
 
-  /* Parent grid for form and shows */
 .shows-container {
     display: grid;
-    grid-template-columns: 2fr; /* stack vertically by default */
+    grid-template-columns: 1fr; 
     gap: 2rem;
+    padding-top: 1rem;
     max-width: 1200px;
     margin: 0 auto
  }
   
-  /* Individual show cards layout */
-  .show-list {
-    display: grid;
-    grid-template-columns: 1fr; /* single column on small screens */
-    gap: 1rem;
-  }
-  
-  /* Responsive: side-by-side on larger screens */
   @media (min-width: 768px) {
     .shows-container {
-      grid-template-columns: 300px 1fr; /* form 300px, shows take remaining space */
-      align-items: start; /* align form and show list at top */
+      grid-template-columns: 300px 1fr; 
+      align-items: start; 
     }
   
     .show-list {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* cards side by side */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     }
   }
-  
