@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boulder Musician's Bulletin</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boulder Musician's Bulletin</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+  <div class="container">
     <nav>
-        <div class="main-nav">
-            <div class="nav-brand">Boulder Musician's Bulletin</div>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#BuySell">Buy/Sell</a></li>
-                <li><a href="shows.html">Shows</a></li>
-                <li><a href="#Lessons">Lessons</a></li>
-                <li><a href="#Promote">Promote Your Music!</a></li>
-            </ul>
-        </div>
-        <ul class = "nav-burger-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#BuySell">Buy/Sell</a></li>
-            <li><a href="shows.html">Shows</a></li>
-            <li><a href="#Lessons">Lessons</a></li>
-            <li><a href="#Promote">Promote Your Music!</a></li>
+      <div class="main-nav">
+        <div class="nav-brand">Boulder Musician's Bulletin</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#BuySell">Buy/Sell</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="#Lessons">Lessons</a></li>
+          <li><a href="#Promote">Promote Your Music!</a></li>
         </ul>
+      </div>
+
+      <ul class="nav-burger-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#BuySell">Buy/Sell</a></li>
+        <li><a href="shows.html">Shows</a></li>
+        <li><a href="#Lessons">Lessons</a></li>
+        <li><a href="#Promote">Promote Your Music!</a></li>
+      </ul>
     </nav>
+    
     <h1>Boulder Musician's Bulletin</h1>
+    <h2>Meet Your Local Bands!</h2>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="Photos/sketchwork.jpg" alt="Sketchwork" style="width:100%">
+        <div class="text">Sketchwork</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="Photos/hnp.jpg" alt="Huck n' Pray" style="width:100%">
+        <div class="text">Huck n' Pray</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="Photos/squash.jpg" alt="Squash" style="width:100%">
+        <div class="text">Squash</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    
-    <script src="script.js" defer></script>
-    
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <p>
+      Our featured bands include groups of CU Students collaborating on doing what they love most — 
+      creating music for all to enjoy. Be sure to check out one or all of the lovely bands in the area!
+    </p>
+  </div>
+
+  <script src="script.js" defer></script>
+
+  <footer>
+    <p>Boulder Band Bulletin - 2025</p>
+  </footer>
+
 </body>
 </html>
