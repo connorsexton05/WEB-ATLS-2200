@@ -14,7 +14,6 @@
     "footer footer";
 }
 
-
 footer {
     grid-area: footer;
     padding: 2em;
@@ -139,10 +138,6 @@ footer {
   margin: auto;
 }
 
-.mySlides {
-  display: none;
-}
-
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -169,7 +164,7 @@ footer {
 
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 30px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
