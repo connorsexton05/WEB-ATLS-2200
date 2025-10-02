@@ -242,3 +242,20 @@ footer {
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     }
   }
+
+  .light {
+    background-color: antiquewhite;
+    color: black;
+  }
+
+  .dark {
+    background-color: black;
+    color: antiquewhite;
+  }
+
+  #theme {
+    display: grid;
+    margin: 0 auto; /* centers horizontally */
+  }
+  
+

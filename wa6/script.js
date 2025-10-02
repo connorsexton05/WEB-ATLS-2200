@@ -47,3 +47,22 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+let btn = document.querySelector('#theme').addEventListener('click', theme);
+
+function theme() {
+  // console.log("theme works")
+  const currentTheme = document.body.className || 'light';
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+}
+
+function setTheme(theme) {
+  localStorage.setItem('userTheme', theme);
+  document.body.className = theme;
+}
+
+window.addEventListener('load', function() {
+  const savedTheme = localStorage.getItem('userTheme') || 'light';
+  document.body.className = savedTheme;
+});
+
