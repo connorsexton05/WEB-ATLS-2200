@@ -46,21 +46,23 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
+// connect the event listener to the toggle button in index.html
 let btn = document.querySelector('#theme').addEventListener('click', theme);
 
 function theme() {
-  // console.log("theme works")
+  // determine theme, default to light
   const currentTheme = document.body.className || 'light';
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   setTheme(newTheme);
 }
 
+// store preference data in localStorage apply theme in CSS styling
 function setTheme(theme) {
   localStorage.setItem('userTheme', theme);
   document.body.className = theme;
 }
 
+// on page load, check localStorage for preference, if there is data saved, apply theme accordingly
 window.addEventListener('load', function() {
   const savedTheme = localStorage.getItem('userTheme') || 'light';
   document.body.className = savedTheme;
