@@ -36,7 +36,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background-color: green;
+    background-color: rgb(0, 75, 128);
     color: white;
     position: relative;
 }
@@ -244,12 +244,12 @@ footer {
   }
 
   .light {
-    background-color: antiquewhite;
+    background-color: rgb(231, 219, 204);
     color: black;
   }
 
   .dark {
-    background-color: black;
+    background-color: rgb(43, 38, 38);
     color: antiquewhite;
   }
 
