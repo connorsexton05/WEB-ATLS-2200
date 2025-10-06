@@ -243,14 +243,34 @@ footer {
     }
   }
 
+  /* Mobile Media Querey (small to large phone) */
+  @media (min-width: 320px) and (max-width: 425px) {
+    body {
+      font-size: 1rem;
+    }
+  }
+
+  /* Tablet Media Querey */
+  @media (min-width: 768px) {
+    body {
+      font-size: 1.1rem;
+    }
+  }
+/* Laptop media query */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1rem;
+    }
+  }
+
   .light {
     background-color: rgb(231, 219, 204);
     color: black;
   }
 
   .dark {
-    background-color: rgb(43, 38, 38);
-    color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.914);
+    color: rgb(30, 111, 225);
   }
 
   #theme {

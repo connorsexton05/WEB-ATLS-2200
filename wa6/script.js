@@ -17,17 +17,40 @@ navToggle.addEventListener("click", () => {
     }
 })
 
-//Show first photo on page open
+let slides = document.getElementsByClassName("mySlides");
 let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+if (slides.length > 0) {
+  showSlides(slideIndex);
 
-//toggle slides
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let dots = document.getElementsByClassName("dot");
+    if (slides.length === 0) return; 
+
+    if (n > slides.length) {slideIndex = 1;}
+    if (n < 1) {slideIndex = slides.length;}
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";
+    if (dots.length > 0) dots[slideIndex-1].className += " active";
+  }
+
+  window.plusSlides = plusSlides;
+  window.currentSlide = currentSlide;
 }
 
 //display photo and highlight circle
@@ -68,4 +91,47 @@ window.addEventListener('load', function() {
   document.body.className = savedTheme;
 });
 
+
+const bandForm = document.querySelector("#bandForm");
+
+window.addEventListener("load", () => {
+  const savedData = JSON.parse(localStorage.getItem("bandFormData"));
+  if (savedData) {
+    document.querySelector("#fname").value = savedData.fname || "";
+    document.querySelector("#lname").value = savedData.lname || "";
+    document.querySelector("#subject").value = savedData.subject || "";
+  }
+});
+
+bandForm.addEventListener("input", () => {
+  const formData = {
+    fname: document.querySelector("#fname").value,
+    lname: document.querySelector("#lname").value,
+    subject: document.querySelector("#subject").value,
+    timestamp: Date.now()
+  };
+  localStorage.setItem("bandFormData", JSON.stringify(formData));
+});
+
+bandForm.addEventListener("submit", (e) => {
+  e.preventDefault(); 
+  alert("Form submitted! Someone on our team will add your show to the bulletin shortly!");
+});
+
+const clearBtn = document.createElement("button");
+clearBtn.textContent = "Clear Local Data";
+clearBtn.type = "button";
+clearBtn.id = "clearData";
+document.body.appendChild(clearBtn);
+
+clearBtn.addEventListener("click", () => {
+  localStorage.removeItem("bandFormData");
+  localStorage.removeItem("userTheme");
+  document.querySelector("#fname").value = "";
+  document.querySelector("#lname").value = "";
+  document.querySelector("#subject").value = "";
+  document.body.className = "light";
+
+  alert("All locally saved data has been erased.");
+});
 
