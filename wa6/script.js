@@ -134,4 +134,3 @@ clearBtn.addEventListener("click", () => {
 
   alert("All locally saved data has been erased.");
 });
-

@@ -174,7 +174,7 @@ footer {
 
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 12px; 
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -244,22 +244,34 @@ footer {
   }
 
   /* Mobile Media Querey (small to large phone) */
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     body {
-      font-size: 1rem;
+      font-size: 1.05rem;
+    }
+    .show-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); 
     }
   }
 
   /* Tablet Media Querey */
   @media (min-width: 768px) {
     body {
-      font-size: 1.1rem;
+      font-size: 1rem;
+    }
+    .show-list{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
     }
   }
 /* Laptop media query */
   @media (min-width: 1024px) {
     body {
       font-size: 1rem;
+    }
+    .show-list{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     }
   }
 
