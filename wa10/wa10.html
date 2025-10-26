@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke-inator</title>
+    <link rel="stylesheet" href="wa10.css">
+</head>
+<body>
+    <div class="app">
+        <h1>The Funny Joke-inator</h1>
+        <section class="setup">
+          <div class="setup-text" id="js-setup-text"></div>
+          <div class="setup-text" id="js-punchline-text"></div>
+        </section>
+        <section class="controls" >
+          <button type="button" id="js-new-setup" class="new-setup button">
+            Generate a new Joke!
+          </button>
+          <button type="button" id="js-show-punchline" class="punchline button">
+            Tell me the punchline!
+          </button>
+          <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
+          <button type="button" id="js-save-favorite" class="favorites button">
+            Save to Favorites!
+          </button>
+          <button type="button" id="js-view-favorites" class="view favorite button">
+            View Favorites!
+          </button>
+          <div id="js-favorites-list" class="favorites-list"></div>
+        </section>
+      </div>
+      <section class="reflection">
+        <p>
+          For this weeks WA assignment, we were tasked with changing the ICA10 API assignment to reflect our own styling
+          and to change the API we are grabbing data from. Originally, it was a quote generator, but I changed it to be a
+          joke generator. A "Joke-inator". For my extension, I added two buttons: a save to favorites and a view favorites button.
+          This saves the joke and punchline via localStorage and puts them into a collapsible section for the user to view again when they please.
+        </p>
+      <br>
+        <p>
+          For my critique project, I would see myself using Spotify's public API. This would give me the ability 
+          to pull real data on artists, playlists, and track popularity. I would use this to redesigned the current trash recommendation 
+          system that recommends more independent and diverse artists. The API would provide the data to reshape what users see on their Spotify feed.
+        </p>
+      </section>
+      <script src="wa10.js"></script>
+</body>
+</html>
