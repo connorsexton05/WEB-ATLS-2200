@@ -27,7 +27,7 @@ async function fetchEvents(city, radius) {
   eventsDiv.innerHTML = "<p>Loading events...</p>";
 
   try {
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&city=${encodeURIComponent(city)}&radius=${radius}&unit=miles`;
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${API_KEY}&city=${encodeURIComponent(city)}&radius=${radius}&unit=miles&classificationName=music`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(`API error ${res.status}`);
     const data = await res.json();
